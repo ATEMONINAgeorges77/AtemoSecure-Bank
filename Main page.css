@@ -1,0 +1,346 @@
+/* ==========================================================================
+   1. STYLES GLOBAUX & NUANCE DE COULEURS PRO (LIGHT THEME)
+   ========================================================================== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+    background-color: #15b12a; /* Fond gris-bleu très clair, très propre */
+    color: #334155; /* Texte gris ardoise doux pour les yeux */
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/* ==========================================================================
+   2. LA BARRE DE NAVIGATION (STYLE PROFESSIONNEL)
+   ========================================================================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+    background-color: #353830;
+    border-bottom: 1px solid #e2e8f0;
+    position: relative;
+    z-index: 100;
+}
+
+.nav-logo h2 {
+    margin: 0;
+    font-size: 22px;
+    letter-spacing: -0.5px;
+    color: #dde0e6; /* Bleu marine presque noir */
+    font-weight: 700;
+}
+
+.nav-logo h2 span { 
+    color: #2563eb; /* Bleu cobalt institutionnel */
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 35px;
+}
+
+.nav-links li a {
+    color: #64748b;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-links li a:hover, .nav-links li a.active { 
+    color: #2563eb; 
+}
+
+.btn-signup {
+    background-color: #2563eb;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+}
+
+.btn-signup:hover {
+    background-color: #1d4ed8;
+}
+
+/* MENUS BURGER POUR PETITS ÉCRANS */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 16px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.menu-toggle span {
+    width: 100%;
+    height: 2px;
+    background-color: #0f172a;
+    transition: all 0.2s ease;
+}
+
+.menu-toggle.toggle-active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.menu-toggle.toggle-active span:nth-child(2) { opacity: 0; }
+.menu-toggle.toggle-active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ==========================================================================
+   3. SECTION HERO (TITRE & APPELS À L'ACTION)
+   ========================================================================== */
+.hero-section {
+    min-height: 55vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 10%;
+    background-color: #bcbcca;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.hero-content h1 {
+    font-size: 46px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #0f0f0f;
+}
+
+.hero-content h1 span {
+    color: #2563eb;
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: #475569;
+    max-width: 650px;
+    margin: 0 auto 35px auto;
+    line-height: 1.6;
+}
+
+.hero-cta {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.cta-primary {
+    background-color: #2563eb;
+    color: #ffffff;
+    padding: 14px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    transition: background-color 0.2s ease;
+}
+
+.cta-primary:hover { background-color: #1d4ed8; }
+
+.cta-secondary {
+    background-color: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    color: #334155;
+    padding: 14px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    transition: all 0.2s ease;
+}
+
+.cta-secondary:hover { 
+    background-color: #e2e8f0; 
+}
+
+/* ==========================================================================
+   4. SECTION GALERIE DE COMPOSANTS DE L'APPLICATION
+   ========================================================================== */
+.gallery-section {
+    padding: 80px 8%;
+    background-color: #f8fafc;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+.section-title p { 
+    color: #64748b; 
+    font-size: 16px; 
+    margin: 0;
+}
+
+.gallery-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gallery-item {
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    height: 230px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 20px;
+    box-sizing: border-box;
+    background: linear-gradient(to top, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0) 100%);
+}
+
+.gallery-overlay h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.04); /* Zoom très léger et discret */
+}
+
+.gallery-item:hover {
+    border-color: #cbd5e1;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+}
+
+/* ==========================================================================
+   5. CARDS DE FONCTIONNALITÉS ÉPURÉES
+   ========================================================================== */
+.features-section {
+    padding: 80px 8%;
+    background-color: #bcbcca;
+    border-top: 1px solid #e2e8f0;
+}
+
+.features-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    text-align: left; /* Aligné à gauche pour un effet éditorial sérieux */
+    transition: border-color 0.2s ease;
+}
+
+.feature-card:hover {
+    border-color: #94a3b8;
+}
+
+.feature-icon { 
+    font-size: 28px; 
+    margin-bottom: 20px; 
+    display: inline-block;
+}
+
+.feature-card h3 { 
+    font-size: 18px; 
+    margin: 0 0 12px 0; 
+    color: #0f172a; 
+    font-weight: 600;
+}
+
+.feature-card p { 
+    color: #475569; 
+    font-size: 14px; 
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ==========================================================================
+   6. FOOTER & ADAPTATION DISPOSITIFS MOBILES
+   ========================================================================== */
+.main-footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #ffffff;
+    font-size: 13px;
+    color: #94a3b8;
+    border-top: 1px solid #e2e8f0;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle { display: flex; }
+
+    .nav-container {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        padding: 25px 0;
+        border-bottom: 1px solid #e2e8f0;
+        gap: 20px;
+        box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-container.open { display: flex; }
+
+    .hero-content h1 { font-size: 32px; }
+    .hero-content p { font-size: 15px; }
+    .hero-cta { flex-direction: column; gap: 10px; padding: 0 15px; }
+}

@@ -1,0 +1,117 @@
+/* ==========================================
+   1. LE FOND DE LA PAGE (IMAGE + CENTRAGE)
+   ========================================== */
+body {
+  display: flex !important;
+  justify-content: center;   /* Centre le formulaire horizontalement */
+  align-items: center;       /* Centre le formulaire verticalement */
+  min-height: 100vh;         /* Prend tout l'écran */
+  margin: 0;
+  font-family: Arial, sans-serif;
+  
+  /* Ton image de fond fétiche */
+  background-image: url('inscription.JPG'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #222;    /* Couleur de secours */
+}
+
+/* ==========================================
+   2. LA CARTE DU FORMULAIRE (SOMBRE TRANSPARENTE)
+   ========================================== */
+form {
+  background: rgba(30, 39, 46, 0.85); /* Fond sombre transparent */
+  padding: 40px;
+  border-radius: 16px;                 /* Beaux angles arrondis */
+  width: 100%;
+  max-width: 420px;                    /* Largeur idéale de la boîte */
+  box-sizing: border-box;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6); /* Ombre pour décoller du fond */
+}
+
+/* Style du grand titre du formulaire */
+h2 {
+  color: #ffffff;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+/* ==========================================
+   3. ALIGNEMENT DES CHAMPS (INPUTS ET SELECT)
+   ========================================== */
+.form-group, #solde-destinataire {
+  margin-bottom: 22px;
+  display: flex;
+  flex-direction: column; /* Aligne le label au-dessus de l'input */
+}
+
+label {
+  color: #ffffff !important;
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* On stylise les inputs ET le menu déroulant de la même manière */
+input[type="number"], select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #333333;
+  font-size: 15px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+/* Petit effet sympa quand on clique dans un champ */
+input[type="number"]:focus, select:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* ==========================================
+   4. LES BOUTONS (SOUMETTRE ET ANNULER)
+   ========================================== */
+.form-buttons {
+  display: flex;
+  justify-content: space-between; /* Un bouton à gauche, un à droite */
+  margin-top: 30px;
+  gap: 15px;
+}
+
+/* Style commun aux deux boutons */
+input[type="submit"], input[type="reset"] {
+  flex: 1; /* Permet aux deux boutons d'avoir exactement la même taille */
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+/* Bouton Soumettre (Bleu) */
+input[type="submit"] {
+  background-color: #007BFF;
+  color: white;
+}
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Bouton Annuler (Rouge) */
+input[type="reset"] {
+  background-color: #dc3545;
+  color: white;
+}
+input[type="reset"]:hover {
+  background-color: #bd2130;
+}

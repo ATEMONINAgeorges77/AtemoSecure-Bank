@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INSCRIPTION</title>
+    <link rel="stylesheet" href="Inscription.css"/>
+</head>
+<body>
+   
+    <form method="POST" action="inscription.php">
+        
+        <div class="form-group">
+        <label for="Nom" class="g-label"> Nom:</label>
+        <input type="text" class="form-input" name="Nom" id="Nom" placeholder="veuillez saisir votre nom" maxlength="14" required/><br>
+
+        <Label for="Prenom" class="g-label"> Prénom:</Label>
+        <input type="text" class="form-input" name="Prenom" id="Prenom" placeholder="Saisissez votre Prenom" maxlength="12" required/><br>
+
+        <label for="email" class="g-label"> Email:</label>
+        <input type="email" class="form-input" name="email" id="email" required/><br>
+
+        <label for="tel" class="g-label"> Téléphone:</label>
+        <input type="tel" class="form-input" name="tel" id="tel" placeholder="Votre Numéro Téléphonique " required><br>
+ 
+        <label for="montant" class="g-label"> Montant Initial: </label>
+        <input type="number" class="form-input" name="montant_initial" id="montant" placeholder="Saisissez le Montant Initial" min="5000"/><br>
+
+</div>
+<div class="form-button">
+        <input type="submit" class="btn btn-submit" value="Soumettre"/><br>
+        <input type="reset" class="btn btn-reset" value="Annuler"/>
+
+</div>
+    </form>
+</body>
+</html>

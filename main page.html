@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BANK - Simplifiez vos transactions financières</title>
+    <link rel="stylesheet" href="Main page.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-logo">
+            <h2>BANK<span></span></h2>
+        </div>
+        
+        <button class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="nav-container" id="nav-container">
+            <ul class="nav-links">
+                <li><a href="#" class="active">Accueil</a></li>
+                <li><a href="#features">Fonctionnalités</a></li>
+                <li><a href="Admin.php">Espace Admin</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <a href="inscription.html" class="btn-signup">Créer un compte</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1>Gerez vos finances en toute <span>simplicité</span></h1>
+            <p>Une plateforme claire et sécurisée pour effectuer vos transferts, suivre vos soldes en temps réel et piloter votre argent au quotidien.</p>
+            <div class="hero-cta">
+                <a href="inscription.html" class="cta-primary">Commencer maintenant</a>
+                <a href="#features" class="cta-secondary">Découvrir les avantages</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="gallery-section">
+        <div class="section-title">
+            <h2>Une interface pensée pour vous</h2>
+            <p>Découvrez un aperçu visuel de nos outils de gestion et de notre tableau de bord.</p>
+        </div>
+        
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="bord.JPEG" alt="Tableau de bord de l'application">
+                <div class="gallery-overlay">
+                    <h3>Suivi de compte</h3>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="sécurité.JPEG" alt="Interface de paiement sécurisé">
+                <div class="gallery-overlay">
+                    <h3>Paiements sécurisés</h3>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="graphique.PNG" alt="Graphiques de statistiques">
+                <div class="gallery-overlay">
+                    <h3>Statistiques claires</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features-section">
+        <div class="section-title">
+            <h2>La technologie au service de votre argent</h2>
+            <p>Tous les outils essentiels regroupés au même endroit.</p>
+        </div>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon"></div>
+                <h3>Rapidité d'exécution</h3>
+                <p>Vos dépôts et demandes de retraits sont traités instantanément sans frais cachés.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon"></div>
+                <h3>Sécurité de niveau bancaire</h3>
+                <p>Chiffrement rigoureux de vos informations d'accès et protection de vos transactions.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon"></div>
+                <h3>Contrôle total</h3>
+                <p>Accédez à un historique limpide pour catégoriser vos dépenses et analyser vos soldes.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 Bank. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navContainer = document.getElementById('nav-container');
+
+        menuToggle.addEventListener('click', function() {
+            navContainer.classList.toggle('open');
+            menuToggle.classList.toggle('toggle-active');
+        });
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,277 @@
+/* ==========================================================================
+   1. VARIABLES & STYLES GLOBAUX FOND SOMBRE
+   ========================================================================== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+    background-color: #eeeeea; 
+    color: #a5a5aa;
+    box-sizing: border-box;
+}
+
+.admin-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ==========================================================================
+   2. SIDEBAR PREMIUM DIGITAL
+   ========================================================================== */
+.admin-sidebar {
+    width: 260px;
+    background-color: #6b6762; /* Un ton légèrement plus clair que le fond */
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-logo {
+    padding: 25px 20px;
+    text-align: center;
+    background-color: #0b0f19;
+}
+
+.sidebar-logo h2 {
+    margin: 0;
+    font-size: 22px;
+    letter-spacing: 2px;
+    color: #ffffff;
+    font-weight: 800;
+}
+
+.sidebar-logo h2 span {
+    color: #00d2ff; /* Touche de cyan fluo */
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0 0 0;
+}
+
+.sidebar-menu li a {
+    display: flex;
+    align-items: center;
+    padding: 14px 25px;
+    color: #9ca3af;
+    text-decoration: none;
+    font-size: 15px;
+    transition: all 0.2s ease-in-out;
+}
+
+.menu-icon {
+    margin-right: 12px;
+    font-size: 16px;
+}
+
+.sidebar-menu li a:hover, 
+.sidebar-menu li a.active {
+    color: #ffffff;
+    background: linear-gradient(90deg, rgba(0, 210, 255, 0.1) 0%, rgba(0,0,0,0) 100%);
+    border-left: 4px solid #00d2ff;
+}
+
+.sidebar-menu li.logout a {
+    color: #ff6b6b;
+    margin-top: 60px;
+}
+.sidebar-menu li.logout a:hover {
+    background: linear-gradient(90deg, rgba(255, 107, 107, 0.1) 0%, rgba(0,0,0,0) 100%);
+    border-left-color: #ff6b6b;
+}
+
+/* ==========================================================================
+   3. ZONE DE CONTENU PRINCIPALE (MAIN CONTENT)
+   ========================================================================== */
+.admin-main {
+    flex: 1;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.main-header h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: #080808;
+}
+
+.subtitle {
+    margin: 5px 0 0 0;
+    color: #0e0e0f;
+    font-size: 14px;
+}
+
+.badge-role {
+    background-color: rgba(0, 210, 255, 0.1);
+    color: #202324;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    border: 1px solid rgba(0, 210, 255, 0.2);
+}
+
+/* ==========================================================================
+   4. LES 4 BOÎTES DE STATISTIQUES AVEC LUEUR NÉON (GLOW)
+   ========================================================================== */
+.admin-stats {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.stat-box {
+    flex: 1;
+    min-width: 220px;
+    background-color: #474543;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.stat-box:hover {
+    transform: translateY(-3px);
+}
+
+.stat-box h3 {
+    margin: 0 0 12px 0;
+    font-size: 12px;
+    color: #0f0f0f;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.stat-box .stat-number {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+/* Application des effets lumineux de couleurs numériques */
+.stat-box.members:hover { 
+    box-shadow: 0 10px 20px rgba(0, 123, 255, 0.15); 
+    border-color: #007bff;
+}
+.stat-box.volume:hover { 
+    box-shadow: 0 10px 20px rgba(46, 213, 115, 0.15); 
+    border-color: #2ed573;
+}
+.stat-box.validated { border-color: rgba(26, 188, 156, 0.2); }
+.stat-box.validated .stat-number { color: #1abc9c; }
+.stat-box.validated:hover { 
+    box-shadow: 0 10px 20px rgba(26, 188, 156, 0.15); 
+    border-color: #1abc9c;
+}
+
+.stat-box.blocked { border-color: rgba(255, 71, 87, 0.2); }
+.stat-box.blocked .stat-number { color: #ff4757; }
+.stat-box.blocked:hover { 
+    box-shadow: 0 10px 20px rgba(255, 71, 87, 0.15); 
+    border-color: #ff4757;
+}
+
+/* ==========================================================================
+   5. TABLEAU DE GESTION CRYPTO/FINTECH STYLE
+   ========================================================================== */
+.management-section {
+    background-color: #6b6762;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.management-section h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: rgba(255, 255, 255, 0.02);
+    color: #9ca3af;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.05);
+}
+
+th, td {
+    padding: 16px 20px;
+    text-align: left;
+}
+
+td {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    font-size: 14px;
+}
+
+/* Personnalisation du style du texte des colonnes */
+.user-name { color: #ffffff; font-weight: 500; }
+.user-email { color: #9ca3af; }
+.user-solde { color: #00d2ff; font-weight: 600; }
+
+/* Badges de statut épurés et modernes */
+.status-tag {
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+}
+.status-tag.tag-active { background-color: rgba(46, 213, 115, 0.1); color: #2ed573; }
+.status-tag.tag-blocked { background-color: rgba(255, 71, 87, 0.1); color: #ff4757; }
+
+/* Boutons d'actions néo-rétro */
+.btn-action {
+    padding: 8px 14px;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 12px;
+    transition: all 0.2s ease;
+}
+
+.btn-block { 
+    background-color: rgba(255, 71, 87, 0.1); 
+    color: #ff4757; 
+    border-color: rgba(255, 71, 87, 0.2);
+}
+.btn-block:hover { 
+    background-color: #ff4757; 
+    color: #ffffff; 
+}
+
+.btn-unblock { 
+    background-color: rgba(46, 213, 115, 0.1); 
+    color: #2ed573;
+    border-color: rgba(46, 213, 115, 0.2);
+}
+.btn-unblock:hover { 
+    background-color: #2ed573; 
+    color: #ffffff; 
+}
